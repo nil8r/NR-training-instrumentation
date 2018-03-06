@@ -1,22 +1,22 @@
 {
   "apps": [
     {
-      "name": "Express API",
+      "name": "Express Training API",
       "script": "./bin/api",
-      "instances": 4,
+      "instances": 1,
       "env": {
         "NODE_ENV": "pm2",
-        "NEW_RELIC_APP_NAME": "Express API Prod",
+        "NEW_RELIC_APP_NAME": "Express Training App - MJSmith (localhost)",
         "PORT": "3001"
       }
     },
     {
-      "name": "Express Web",
+      "name": "Express Training Web",
       "script": "./bin/www",
-      "instances": 4,
+      "instances": 1,
       "env": {
         "NODE_ENV": "pm2",
-        "NEW_RELIC_APP_NAME": "Express Web Prod",
+        "NEW_RELIC_APP_NAME": "Express Training App - MJSmith (localhost)",
         "PORT": "3000"
       }
     },
@@ -25,7 +25,9 @@
       "script": "./test/load/load.js",
       "env": {
         "LOAD_DELAY": "5000"
+        //"LOAD_DELAY": "8000"
       }
     }
   ]
 }
+
